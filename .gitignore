@@ -55,6 +55,8 @@ cmake-build-*/
 
 # IntelliJ
 out/
+public/
+.hugo_build.lock
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/

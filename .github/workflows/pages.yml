@@ -33,45 +33,9 @@ jobs:
           hugo-version: latest
           extended: true
 
-      - name: Create temporary Hugo site
-        run: |
-          mkdir -p /tmp/hugo/content
-          mkdir -p /tmp/hugo/static
-
-          # 複製 Markdown 到 Hugo content
-          rsync -av \
-            --include='*/' \
-            --include='*.md' \
-            --exclude='*' \
-            ./ /tmp/hugo/content/
-
-          # 複製文件附件到 Hugo static
-          rsync -av \
-            --include='*/' \
-            --include='*.pdf' \
-            --include='*.png' \
-            --include='*.jpg' \
-            --include='*.jpeg' \
-            --include='*.gif' \
-            --include='*.svg' \
-            --include='*.webp' \
-            --exclude='*' \
-            ./ /tmp/hugo/static/
-
-          cp ./hugo.toml /tmp/hugo/hugo.toml
-          rsync -av ./layouts/ /tmp/hugo/layouts/
-
-          if [ -d ./static ]; then
-            rsync -av ./static/ /tmp/hugo/static/
-          fi
-
-          if [ -d ./assets ]; then
-            rsync -av ./assets/ /tmp/hugo/assets/
-          fi
-
       - name: Build Hugo site
         run: |
-          hugo --source /tmp/hugo --destination /tmp/public --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+          hugo --destination /tmp/public --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
