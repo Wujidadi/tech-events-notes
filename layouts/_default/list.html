@@ -1,5 +1,10 @@
 {{ define "main" }}
-  {{ .Content }}
+  {{ partial "page-navigation.html" . }}
+  {{ if .Content }}
+    {{ .Content }}
+  {{ else if .Title }}
+    <h1>{{ .Title }}</h1>
+  {{ end }}
 
   {{ if .Pages }}
     <ul>
