@@ -1,0 +1,22 @@
+{{- $destination := .Destination -}}
+{{- $url := $destination -}}
+
+{{- if strings.HasSuffix $destination ".md" -}}
+  {{- $url = .Page.RelRef $destination -}}
+{{- else if and
+  (not (or
+    (strings.HasPrefix $destination "http://")
+    (strings.HasPrefix $destination "https://")
+    (strings.HasPrefix $destination "mailto:")
+    (strings.HasPrefix $destination "#")
+    (strings.HasPrefix $destination "/")
+  ))
+  (or
+    (strings.HasPrefix $destination "./")
+    (strings.HasPrefix $destination "../")
+  )
+-}}
+  {{- $url = (path.Join .Page.File.Dir $destination) | relURL -}}
+{{- end -}}
+
+<a href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>

@@ -23,6 +23,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
@@ -32,6 +36,7 @@ jobs:
       - name: Create temporary Hugo site
         run: |
           mkdir -p /tmp/hugo/content
+          mkdir -p /tmp/hugo/static
 
           # 複製 Markdown 到 Hugo content
           rsync -av \
@@ -39,6 +44,19 @@ jobs:
             --include='*.md' \
             --exclude='*' \
             ./ /tmp/hugo/content/
+
+          # 複製文件附件到 Hugo static
+          rsync -av \
+            --include='*/' \
+            --include='*.pdf' \
+            --include='*.png' \
+            --include='*.jpg' \
+            --include='*.jpeg' \
+            --include='*.gif' \
+            --include='*.svg' \
+            --include='*.webp' \
+            --exclude='*' \
+            ./ /tmp/hugo/static/
 
           # Hugo 首頁使用 _index.md
           if [ -f /tmp/hugo/content/index.md ]; then
@@ -58,10 +76,7 @@ jobs:
 
       - name: Build Hugo site
         run: |
-          hugo --source /tmp/hugo --destination /tmp/public --minify
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+          hugo --source /tmp/hugo --destination /tmp/public --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
