@@ -1,5 +1,14 @@
 {{- $destination := .Destination -}}
 {{- $url := $destination -}}
+{{- $isExternal := or (strings.HasPrefix $destination "http://") (strings.HasPrefix $destination "https://") -}}
+{{- $extension := lower (path.Ext $destination) -}}
+{{- $isStaticAsset := and
+  (ne $extension "")
+  (ne $extension ".md")
+  (ne $extension ".html")
+  (not (strings.HasPrefix $destination "mailto:"))
+  (not (strings.HasPrefix $destination "#"))
+-}}
 
 {{- if strings.HasSuffix $destination ".md" -}}
   {{- $url = .Page.RelRef (dict "path" $destination) -}}
@@ -19,4 +28,4 @@
   {{- $url = (path.Join .Page.File.Dir $destination) | relURL -}}
 {{- end -}}
 
-<a href="{{ $url }}" target="_blank" rel="noopener noreferrer"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>
+<a href="{{ $url }}"{{ if or $isExternal $isStaticAsset }} target="_blank" rel="noopener noreferrer"{{ end }}{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text }}</a>

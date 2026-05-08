@@ -10,7 +10,7 @@
       {{ if and .Pages (ne .Params.showList false) }}
         <ul>
           {{ range .Pages }}
-            <li><a href="{{ .RelPermalink }}" target="_blank" rel="noopener noreferrer">{{ partial "page-title-text.html" . }}</a></li>
+            <li><a href="{{ .RelPermalink }}">{{ partial "page-title-text.html" . }}</a></li>
           {{ end }}
         </ul>
       {{ end }}
