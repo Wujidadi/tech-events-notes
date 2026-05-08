@@ -119,15 +119,6 @@ jobs:
           cat > /tmp/hugo/layouts/index.html <<'EOF'
           {{ define "main" }}
             {{ .Content }}
-
-            <hr>
-
-            <h2>文件列表</h2>
-            <ul>
-              {{ range .Site.RegularPages }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-              {{ end }}
-            </ul>
           {{ end }}
           EOF
 
