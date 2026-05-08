@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  {{- $pageTitle := partial "page-title-text.html" . -}}
+  <title>{{ if ne $pageTitle .Site.Title }}{{ $pageTitle }} | {{ end }}{{ .Site.Title }}</title>
   <style>
     :root {
       color-scheme: dark;
@@ -24,28 +25,21 @@
       padding: 32px;
       word-wrap: break-word;
     }
-    .page-navigation {
-      margin-bottom: 24px;
+    .page-layout {
+      display: block;
     }
-    .page-breadcrumb {
-      margin-bottom: 16px;
+    .page-layout.has-toc {
+      display: grid;
+      grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
     }
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      padding: 6px 12px;
-      color: #c9d1d9;
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 6px;
-    }
-    .back-link:hover {
-      background: #21262d;
-      text-decoration: none;
+    .page-content {
+      min-width: 0;
     }
     .page-toc {
-      margin-bottom: 24px;
+      position: sticky;
+      top: 24px;
       padding: 16px;
       background: #161b22;
       border: 1px solid #30363d;
@@ -64,6 +58,25 @@
     }
     .page-toc ul ul {
       margin-top: 8px;
+    }
+    .page-backnav {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #21262d;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 6px 12px;
+      color: #c9d1d9;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+    }
+    .back-link:hover {
+      background: #21262d;
+      text-decoration: none;
     }
     .markdown-body h1,
     .markdown-body h2 {
@@ -166,6 +179,13 @@
     @media (max-width: 767px) {
       .markdown-body {
         padding: 24px 16px;
+      }
+      .page-layout.has-toc {
+        grid-template-columns: 1fr;
+      }
+      .page-toc {
+        position: static;
+        margin-bottom: 24px;
       }
     }
   </style>

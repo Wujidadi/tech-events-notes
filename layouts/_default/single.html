@@ -1,6 +1,11 @@
 {{ define "main" }}
-  {{ partial "page-navigation.html" . }}
-  <article>
-    {{ .Content }}
-  </article>
+  <div class="page-layout{{ if gt (len .Fragments.Headings) 0 }} has-toc{{ end }}">
+    {{ partial "page-toc.html" . }}
+    <div class="page-content">
+      <article>
+        {{ .Content }}
+      </article>
+      {{ partial "page-back-link.html" . }}
+    </div>
+  </div>
 {{ end }}

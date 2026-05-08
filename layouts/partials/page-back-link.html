@@ -1,0 +1,10 @@
+{{- $parent := .Parent -}}
+{{- if and (not .IsHome) (not $parent) .CurrentSection -}}
+  {{- $parent = .CurrentSection -}}
+{{- end -}}
+
+{{- if $parent -}}
+  <nav class="page-backnav" aria-label="頁面導覽">
+    <a class="back-link" href="{{ $parent.RelPermalink }}">← 回上一頁</a>
+  </nav>
+{{- end -}}

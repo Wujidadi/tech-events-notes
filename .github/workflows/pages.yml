@@ -58,11 +58,6 @@ jobs:
             --exclude='*' \
             ./ /tmp/hugo/static/
 
-          # Hugo 首頁使用 _index.md
-          if [ -f /tmp/hugo/content/index.md ]; then
-            mv /tmp/hugo/content/index.md /tmp/hugo/content/_index.md
-          fi
-
           cp ./hugo.toml /tmp/hugo/hugo.toml
           rsync -av ./layouts/ /tmp/hugo/layouts/
 

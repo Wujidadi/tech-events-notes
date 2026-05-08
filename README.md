@@ -1,3 +1,3 @@
-# Tech Conference Notes
+# Tech Events Notes
 
-技術會議筆記。
+技術會議／活動筆記。

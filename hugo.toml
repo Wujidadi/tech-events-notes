@@ -1,6 +1,6 @@
 baseURL = "/"
 locale = "zh-tw"
-title = "Markdown Docs"
+title = "Tech Events Notes"
 hasCJKLanguage = true
 
 [markup]

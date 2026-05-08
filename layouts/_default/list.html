@@ -1,16 +1,21 @@
 {{ define "main" }}
-  {{ partial "page-navigation.html" . }}
-  {{ if .Content }}
-    {{ .Content }}
-  {{ else if .Title }}
-    <h1>{{ .Title }}</h1>
-  {{ end }}
-
-  {{ if .Pages }}
-    <ul>
-      {{ range .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  <div class="page-layout{{ if gt (len .Fragments.Headings) 0 }} has-toc{{ end }}">
+    {{ partial "page-toc.html" . }}
+    <div class="page-content">
+      {{ if not .IsHome }}
+        <h1>{{ partial "page-title-text.html" . }}</h1>
       {{ end }}
-    </ul>
-  {{ end }}
+      {{ .Content }}
+
+      {{ if and .Pages (ne .Params.showList false) }}
+        <ul>
+          {{ range .Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ partial "page-title-text.html" . }}</a></li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+      {{ partial "page-back-link.html" . }}
+    </div>
+  </div>
 {{ end }}
