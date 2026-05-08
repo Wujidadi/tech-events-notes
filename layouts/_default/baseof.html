@@ -29,17 +29,14 @@
       display: block;
     }
     .page-layout.has-toc {
-      display: grid;
-      grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
-      gap: 32px;
-      align-items: start;
+      position: relative;
     }
     .page-content {
       min-width: 0;
     }
     .page-toc {
-      position: sticky;
-      top: 24px;
+      font-size: 0.875rem;
+      line-height: 1.45;
       padding: 16px;
       background: #161b22;
       border: 1px solid #30363d;
@@ -58,6 +55,9 @@
     }
     .page-toc ul ul {
       margin-top: 8px;
+    }
+    .page-toc li + li {
+      margin-top: 0.35em;
     }
     .page-backnav {
       margin-top: 32px;
@@ -176,15 +176,22 @@
       max-width: 100%;
       height: auto;
     }
+    @media (min-width: 1600px) {
+      .page-toc {
+        position: fixed;
+        top: 24px;
+        left: calc(50vw - 490px - 292px);
+        width: 260px;
+        max-height: calc(100vh - 48px);
+        overflow: auto;
+        scrollbar-gutter: stable;
+      }
+    }
     @media (max-width: 767px) {
       .markdown-body {
         padding: 24px 16px;
       }
-      .page-layout.has-toc {
-        grid-template-columns: 1fr;
-      }
       .page-toc {
-        position: static;
         margin-bottom: 24px;
       }
     }
