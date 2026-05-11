@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tech Events Notes icon">
+  <defs>
+    <linearGradient id="bg" x1="10" y1="6" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1f6feb"/>
+      <stop offset="0.56" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#238636"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="14" y1="12" x2="50" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#79c0ff"/>
+      <stop offset="1" stop-color="#7ee787"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0d1117"/>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)" opacity="0.96"/>
+  <path d="M17 21H11M47 21h6M17 43H11M47 43h6M21 17v-6M43 17v-6M21 47v6M43 47v6" fill="none" stroke="#79c0ff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="11" cy="21" r="3" fill="#79c0ff"/>
+  <circle cx="53" cy="21" r="3" fill="#7ee787"/>
+  <circle cx="11" cy="43" r="3" fill="#7ee787"/>
+  <circle cx="53" cy="43" r="3" fill="#79c0ff"/>
+  <rect x="18" y="16" width="28" height="32" rx="5" fill="#f0f6fc"/>
+  <path d="M23 16h18v7H23z" fill="url(#accent)"/>
+  <path d="M24 30h16M24 37h16M24 44h10" fill="none" stroke="#30363d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M26 27h12v7H26z" fill="#0d1117" opacity="0.92"/>
+  <path d="M29 34h6M32 34v4" fill="none" stroke="#79c0ff" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="24" cy="25" r="2.2" fill="#7ee787"/>
+  <circle cx="40" cy="25" r="2.2" fill="#7ee787"/>
+</svg>

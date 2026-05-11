@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- $favicon := "favicon.svg" | relURL -}}
+  <link rel="icon" type="image/svg+xml" href="{{ $favicon }}">
+  <meta name="theme-color" content="#0d1117">
   {{- $pageTitle := partial "page-title-text.html" . -}}
   <title>{{ if ne $pageTitle .Site.Title }}{{ $pageTitle }} | {{ end }}{{ .Site.Title }}</title>
   <style>
