@@ -118,7 +118,7 @@
 
 ## 6. 軟體工程的新挑戰：隱藏的「驗證稅」
 
-導入 AI 並非毫無代價，其中最大的隱藏成本是**「驗證稅 (Verification Tax)」**。
+導入 AI 並非毫無代價，其中最大的隱藏成本是 **「驗證稅 (Verification Tax)」**。
 
 - AI 產出往往「充滿自信，但未必絕對正確 (Confident output, not correct output)」。
 - AI 生成的程式碼、設定或修復方案仍需要大量檢查與驗證。
