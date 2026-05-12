@@ -12,6 +12,8 @@
 
 {{- if strings.HasSuffix $destination ".md" -}}
   {{- $url = .Page.RelRef (dict "path" $destination) -}}
+{{- else if ne (replaceRE `^(\.\./)+static/` "/" $destination) $destination -}}
+  {{- $url = (replaceRE `^(\.\./)+static/` "/" $destination) | relURL -}}
 {{- else if and
   (not (or
     (strings.HasPrefix $destination "http://")

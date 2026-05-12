@@ -6,7 +6,7 @@
 
 > [議程](https://o11yday.ithome.com.tw/2026/session-page/4403)
 
-> [簡報](./from_passive_monitoring_to_active_operations.pdf)
+> [簡報](../../../static/events/observability_day_2026/from_passive_monitoring_to_active_operations.pdf)
 
 > 在 AI 原生開發時代 ，AI 輔助工具雖帶來速度提升，卻也讓開發與維運團隊面臨高達 64% 的「驗證稅」——必須花費大量時間手動驗證 AI 產生的程式碼與排查系統錯誤。
 >
