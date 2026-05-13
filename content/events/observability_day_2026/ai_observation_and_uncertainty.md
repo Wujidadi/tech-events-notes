@@ -6,7 +6,7 @@
 
 > [議程](https://o11yday.ithome.com.tw/2026/session-page/4396)
 
-> [簡報](../../../static/events/observability_day_2026/ai_observation_and_uncertainty.pdf)
+> [簡報](https://drive.google.com/file/d/12T2csNaF6ufE4sLxDG3pXkEt_Avt7fXW/view)
 
 > 當 LLM 與 Agent 系統全面進入生產環境時，由於它們的本質是機率性而非確定性：相同的 prompt 可能帶來截然不同的輸出，幻覺、漂移、成本失控、無限迴圈隨時可能發生。
 >

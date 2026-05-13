@@ -6,7 +6,7 @@
 
 > [議程](https://o11yday.ithome.com.tw/2026/session-page/4402)
 
-> [簡報](../../../static/events/observability_day_2026/sre_in_the_ai_agent_era.pdf)
+> [簡報](https://drive.google.com/file/d/19LxTdRMdwO1iWCc83s9Dqrv3adiJ8V4f/view)
 
 > 本場次將分享一位 SRE 工程師如何將 AI Agent 融入日常 On-Call 工作流程的真實經驗。演講從一個深夜告警的故事開場──同樣的 API 5xx 故障，傳統做法需要 2 小時以上才能完成從查詢、定位、修復到撰寫報告的完整流程，而透過 Claude 搭配 MCP/Skill 整合 OpenSearch、Jira、Confluence 等工具後，僅需 15 至 20 分鐘即可完成。
 >

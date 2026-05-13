@@ -6,7 +6,7 @@
 
 > [議程](https://o11yday.ithome.com.tw/2026/session-page/4447)
 
-> [簡報](../../../static/events/observability_day_2026/from_itops_to_aiops.pdf)
+> [簡報](https://drive.google.com/file/d/169um4aYmQCFzBWMum1AcGXvY1UYWJHyr/view)
 
 ---
 

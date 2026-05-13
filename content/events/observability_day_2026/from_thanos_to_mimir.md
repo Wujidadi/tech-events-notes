@@ -6,7 +6,7 @@
 
 > [議程](https://o11yday.ithome.com.tw/2026/session-page/4405)
 
-> [簡報](../../../static/events/observability_day_2026/from_thanos_to_mimir.pdf)
+> [簡報](https://drive.google.com/file/d/12OH72ijVsOJuhA8yS0yc1S74kxD4vuRQ/view)
 
 > 本議程將直接分享我們如何將核心監控架構從 Thanos 遷移至 Grafana Mimir 3.0 的歷程心得。
 >

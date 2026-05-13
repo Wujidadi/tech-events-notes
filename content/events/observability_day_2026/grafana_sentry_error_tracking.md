@@ -6,7 +6,7 @@
 
 > [議程](https://o11yday.ithome.com.tw/2026/session-page/4406)
 
-> [簡報](../../../static/events/observability_day_2026/grafana_sentry_error_tracking.pdf)
+> [簡報](https://drive.google.com/file/d/13YYrpUjUJaODTADOlw2HL496ntieK7od/view)
 
 > 在 Prometheus 與 Loki 建立的監控堡壘下，為什麼我們還需要 Sentry？
 >

@@ -6,7 +6,7 @@
 
 > [議程](https://o11yday.ithome.com.tw/2026/session-page/4400)
 
-> [簡報](../../../static/events/observability_day_2026/canary_deployment_observability_practice.pdf)
+> [簡報](https://drive.google.com/file/d/1Z4CSDLuDnh8D_vsoWqXaKLCdd2BasKVA/view)
 
 > 金絲雀部署是降低上線風險的關鍵策略，但如何在流量切換過程中即時掌握系統健康狀態？
 >

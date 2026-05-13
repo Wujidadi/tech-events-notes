@@ -6,7 +6,7 @@
 
 > [議程](https://o11yday.ithome.com.tw/2026/session-page/4399)
 
-> [簡報](../../../static/events/observability_day_2026/metric_instrumentation_from_dropwizard_to_opentelemetry.pdf)
+> [簡報](https://drive.google.com/file/d/1P_VazgQLisjRgqp63JvI9jpk2IYUiY64/view)
 
 > Taboola 每分鐘管理超過 10 億筆指標，主要由數千個 Java 執行個體產生。雖然 Dropwizard 長期以來一直是我們在 Java 上的 instrumentation 解決方案，但本場演講將說明我們如何轉向 OpenTelemetry，內容包含：
 >

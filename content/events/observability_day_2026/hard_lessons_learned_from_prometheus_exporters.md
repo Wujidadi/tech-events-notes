@@ -6,7 +6,7 @@
 
 > [議程](https://o11yday.ithome.com.tw/2026/session-page/4408)
 
-> [簡報](../../../static/events/observability_day_2026/hard_lessons_learned_from_prometheus_exporters.pdf)
+> [簡報](https://drive.google.com/file/d/1fHZP7oUhXboG5_942W7h1gx112gRX_f_/view)
 
 > 雖然 Prometheus 已成為現代雲原生環境中維護與可觀測性的業界標準，但在大規模 Kubernetes 生產叢集中，我們仍頻繁遭遇許多「指標滿天飛、Grafana 儀表板美輪美奐，問題卻始終找不到」的困境。
 >

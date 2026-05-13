@@ -1,0 +1,8 @@
+# 本目錄用於存放各活動的相關文件和資源，例如簡報檔、圖片等
+#
+# 路徑應對應 /content/events/ 下的各個活動子目錄
+# 如 /static/events/observability_day_2026/ 對應 /content/events/observability_day_2026/
+#
+# 為保護講者／著作方的權益，未經授權的檔案（如演講簡報檔）不應放在這裡
+# 這裡只應存放經過授權且適合公開的資源
+#
