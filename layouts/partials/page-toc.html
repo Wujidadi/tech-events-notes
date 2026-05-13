@@ -1,5 +1,6 @@
 {{- if gt (len .Fragments.Headings) 0 -}}
   <aside class="page-toc" aria-label="目錄">
+    {{ partial "page-back-link.html" (dict "page" . "variant" "toc") }}
     <h2>目錄</h2>
     {{ .TableOfContents }}
   </aside>

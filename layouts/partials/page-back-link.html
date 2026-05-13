@@ -1,10 +1,14 @@
-{{- $parent := .Parent -}}
-{{- if and (not .IsHome) (not $parent) .CurrentSection -}}
-  {{- $parent = .CurrentSection -}}
+{{- $page := .page -}}
+{{- $variant := .variant | default "bottom" -}}
+{{- $parent := $page.Parent -}}
+{{- if and (not $page.IsHome) (not $parent) $page.CurrentSection -}}
+  {{- $parent = $page.CurrentSection -}}
 {{- end -}}
 
 {{- if $parent -}}
-  <nav class="page-backnav" aria-label="頁面導覽">
-    <a class="back-link" href="{{ $parent.RelPermalink }}">← 回上一頁</a>
+  <nav class="page-backnav page-backnav--{{ $variant }}" aria-label="頁面導覽">
+    <a class="back-link back-link--{{ $variant }}" href="{{ $parent.RelPermalink }}">
+      <span>回上一頁</span>
+    </a>
   </nav>
 {{- end -}}

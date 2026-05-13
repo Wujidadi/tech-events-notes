@@ -2,10 +2,11 @@
   <div class="page-layout{{ if gt (len .Fragments.Headings) 0 }} has-toc{{ end }}">
     {{ partial "page-toc.html" . }}
     <div class="page-content">
+      {{ partial "page-back-link.html" (dict "page" . "variant" "top") }}
       <article>
         {{ .Content }}
       </article>
-      {{ partial "page-back-link.html" . }}
+      {{ partial "page-back-link.html" (dict "page" . "variant" "bottom") }}
     </div>
   </div>
 {{ end }}
